@@ -1,64 +1,40 @@
 """
-Simple Python Calculator
-Author: Student Project
+AI Professional Calculator - Main Entry Point
+Upgraded from simple console calculator to AI-powered GUI
 """
+import sys
+import os
 
-def add(a, b):
-    return a + b
+# Add current directory to path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-def subtract(a, b):
-    return a - b
+from controllers.calculator_controller import CalculatorController
+from views.calculator_view import CalculatorView
 
-def multiply(a, b):
-    return a * b
-
-def divide(a, b):
-    if b == 0:
-        return "Cannot divide by zero"
-    return a / b
-
-
-def show_menu():
-    print("\n==== Python Calculator ====")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-    print("5. Exit")
-
-
-while True:
-    show_menu()
-
-    choice = input("Choose an option (1-5): ")
-
-    if choice == "5":
-        print("Goodbye!")
-        break
-
-    if choice not in ["1", "2", "3", "4"]:
-        print("Invalid option. Try again.")
-        continue
-
+def main():
+    """Main entry point - Replaces your console menu with GUI"""
+    print("🤖 AI Professional Calculator")
+    print("=" * 40)
+    print("💡 Features:")
+    print("  • Natural language processing (Ask AI)")
+    print("  • Advanced math functions")
+    print("  • History tracking")
+    print("  • Memory operations (MC, MR, MS, M+)")
+    print("  • Keyboard shortcuts")
+    print("  • Professional GUI")
+    print("=" * 40)
+    print("🚀 Starting GUI...")
+    
     try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-    except ValueError:
-        print("Please enter valid numbers.")
-        continue
+        controller = CalculatorController()
+        view = CalculatorView(controller)
+        view.run()
+    except KeyboardInterrupt:
+        print("\n👋 Goodbye!")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
 
-    if choice == "1":
-        result = add(num1, num2)
-        print(f"Result: {result}")
-
-    elif choice == "2":
-        result = subtract(num1, num2)
-        print(f"Result: {result}")
-
-    elif choice == "3":
-        result = multiply(num1, num2)
-        print(f"Result: {result}")
-
-    elif choice == "4":
-        result = divide(num1, num2)
-        print(f"Result: {result}")
+if __name__ == "__main__":
+    main()
