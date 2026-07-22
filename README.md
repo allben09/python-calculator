@@ -1,23 +1,44 @@
-# Python Calculator
+# 🤖 AI Professional Calculator
 
-A simple calculator project built with Python.
+An intelligent calculator with natural language processing, advanced math features, and a professional GUI.
 
 ## Features
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Input validation
 
-## How to Run
+### 🧠 AI Assistant
+- Natural language processing: "What's 20% of 50?"
+- Smart suggestions and error correction
+- Calculation insights and analytics
 
-1. Install Python
-2. Open terminal in the project folder
-3. Run:
+### 📊 Professional GUI
+- Dark theme with modern design
+- AI chat panel
+- History tracking
+- Memory operations (MC, MR, MS, M+)
 
+### 🔢 Advanced Math
+- Basic: Addition, Subtraction, Multiplication, Division
+- Advanced: Square root, Power, Factorial, Logarithms
+- Trigonometry: Sine, Cosine, Tangent
+- Statistics: Mean, Median, Standard Deviation
+
+### 💾 History Management
+- Persistent storage
+- Export/Import capability
+- Search functionality
+
+## Installation
+
+### Quick Start
 ```bash
-python main.py
-```
+# Clone the repository
+git clone https://github.com/allben09/python-calculator.git
+cd python-calculator
 
-## Technologies Used
-- Python 3
+# Install dependencies
+pip install -r requirements.txt
+
+# Download NLTK data
+python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+
+# Run the calculator
+python main.py
