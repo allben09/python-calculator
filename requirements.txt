@@ -1,1 +1,9 @@
-# No external libraries required
+# Core dependencies
+nltk>=3.6.5
+scikit-learn>=1.0.0
+numpy>=1.21.0
+
+# Optional: For voice features (uncomment if needed)
+# speechrecognition>=3.10.0
+# pyttsx3>=2.90
+# pyaudio>=0.2.11
